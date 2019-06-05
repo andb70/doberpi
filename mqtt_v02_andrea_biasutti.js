@@ -20,9 +20,9 @@ client.on('connect', function () {
 
 client.on('message', function (topic, message) {
   // message is Buffer
+  console.log(message.toString())
   obj = JSON.parse(message);
-  console.log(obj.count);
-  console.log(obj.result);
+  console.log(obj.msg);
   
   //console.log(message.toString())
   client.end()
